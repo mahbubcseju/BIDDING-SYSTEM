@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0B85BA3-D3DA-42DC-B6F5-0EBC9DD8CCF8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BidWeb</RootNamespace>
+    <AssemblyName>BidWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="BidDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BidDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BidDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BidDB.edmx</DependentUpon>
+      <LastGenOutput>BidDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BidDB.edmx.diagram">
+      <DependentUpon>BidDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="BidDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BidDB.edmx</DependentUpon>
+      <LastGenOutput>BidDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="bootstrap-3.3.6-dist\css\Repeater.css" />
+    <Content Include="EditProfile.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="Images\a.jpg" />
+    <Content Include="Images\b.jpg" />
+    <Content Include="Images\c.jpg" />
+    <Content Include="Images\cs1.css" />
+    <Content Include="Images\cs2.css" />
+    <Content Include="Images\cs3.css" />
+    <Content Include="Images\d.jpg" />
+    <Content Include="Images\download %281%29.jpg" />
+    <Content Include="Images\download.jpg" />
+    <Content Include="Images\e.jpg" />
+    <Content Include="Images\f.jpg" />
+    <Content Include="Images\g.jpg" />
+    <Content Include="Images\h.jpg" />
+    <Content Include="Images\i.jpg" />
+    <Content Include="Images\iht.jpg" />
+    <Content Include="Images\images %2810%29.jpg" />
+    <Content Include="Images\images %2812%29.jpg" />
+    <Content Include="Images\images %2813%29.jpg" />
+    <Content Include="Images\images %2814%29.jpg" />
+    <Content Include="Images\images %2815%29.jpg" />
+    <Content Include="Images\images %2818%29.jpg" />
+    <Content Include="Images\images %2819%29.jpg" />
+    <Content Include="Images\images %2820%29.jpg" />
+    <Content Include="Images\images %2822%29.jpg" />
+    <Content Include="Images\images %2823%29.jpg" />
+    <Content Include="Images\images %2824%29.jpg" />
+    <Content Include="Images\images %2825%29.jpg" />
+    <Content Include="Images\images %2826%29.jpg" />
+    <Content Include="Images\images %2827%29.jpg" />
+    <Content Include="Images\images %2828%29.jpg" />
+    <Content Include="Images\images %283%29.jpg" />
+    <Content Include="Images\images %2830%29.jpg" />
+    <Content Include="Images\images %2831%29.jpg" />
+    <Content Include="Images\images %2835%29.jpg" />
+    <Content Include="Images\images %2836%29.jpg" />
+    <Content Include="Images\images %2837%29.jpg" />
+    <Content Include="Images\images %284%29.jpg" />
+    <Content Include="Images\images %2840%29.jpg" />
+    <Content Include="Images\images %285%29.jpg" />
+    <Content Include="Images\images %286%29.jpg" />
+    <Content Include="Images\images %287%29.jpg" />
+    <Content Include="Images\images %288%29.jpg" />
+    <Content Include="Images\images %289%29.jpg" />
+    <Content Include="Images\j.jpg" />
+    <Content Include="Images\js1.js" />
+    <Content Include="Images\js2.js" />
+    <Content Include="Images\js3.js" />
+    <Content Include="Images\js4.js" />
+    <Content Include="Images\js5.js" />
+    <Content Include="Images\k.jpg" />
+    <Content Include="Images\l.jpg" />
+    <Content Include="Images\logo1.png" />
+    <Content Include="Images\logo2.jpg" />
+    <Content Include="Images\n.jpg" />
+    <Content Include="Images\o.jpg" />
+    <Content Include="Images\p.jpg" />
+    <Content Include="Images\pic1.jpg" />
+    <Content Include="Images\pic2.jpg" />
+    <Content Include="Images\pic3.jpg" />
+    <Content Include="MyBoughtList.aspx" />
+    <Content Include="MyProductBidingList.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddItem.aspx" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap-3.3.6-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-3.3.6-dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap-3.3.6-dist\js\npm.js" />
+    <Content Include="Home.aspx" />
+    <Content Include="ItemDetails.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Menu.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="SearchBy.aspx" />
+    <Content Include="ViewAllItem.aspx" />
+    <Content Include="ViewAllItemByRepeater.aspx" />
+    <Content Include="ViewMyItem.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddItem.aspx.cs">
+      <DependentUpon>AddItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddItem.aspx.designer.cs">
+      <DependentUpon>AddItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BidDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BidDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BidDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BidDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BidDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BidDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BidingInfo.cs">
+      <DependentUpon>BidDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetails.aspx.cs">
+      <DependentUpon>ItemDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemDetails.aspx.designer.cs">
+      <DependentUpon>ItemDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyBoughtList.aspx.cs">
+      <DependentUpon>MyBoughtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyBoughtList.aspx.designer.cs">
+      <DependentUpon>MyBoughtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyBoughtList.cs">
+      <DependentUpon>BidDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyProductBidingList.aspx.cs">
+      <DependentUpon>MyProductBidingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProductBidingList.aspx.designer.cs">
+      <DependentUpon>MyProductBidingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInfo.cs">
+      <DependentUpon>BidDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBy.aspx.cs">
+      <DependentUpon>SearchBy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchBy.aspx.designer.cs">
+      <DependentUpon>SearchBy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs">
+      <DependentUpon>BidDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllItem.aspx.cs">
+      <DependentUpon>ViewAllItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllItem.aspx.designer.cs">
+      <DependentUpon>ViewAllItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllItemByRepeater.aspx.cs">
+      <DependentUpon>ViewAllItemByRepeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllItemByRepeater.aspx.designer.cs">
+      <DependentUpon>ViewAllItemByRepeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMyItem.aspx.cs">
+      <DependentUpon>ViewMyItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMyItem.aspx.designer.cs">
+      <DependentUpon>ViewMyItem.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1237</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1237/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

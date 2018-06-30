@@ -1,0 +1,10 @@
+H:\C#\BidWeb\BidWeb\bin\BidWeb.dll.config
+H:\C#\BidWeb\BidWeb\bin\BidWeb.dll
+H:\C#\BidWeb\BidWeb\bin\BidWeb.pdb
+H:\C#\BidWeb\BidWeb\bin\EntityFramework.dll
+H:\C#\BidWeb\BidWeb\bin\EntityFramework.SqlServer.dll
+H:\C#\BidWeb\BidWeb\bin\EntityFramework.xml
+H:\C#\BidWeb\BidWeb\bin\EntityFramework.SqlServer.xml
+H:\C#\BidWeb\BidWeb\obj\Debug\BidWeb.csprojResolveAssemblyReference.cache
+H:\C#\BidWeb\BidWeb\obj\Debug\BidWeb.dll
+H:\C#\BidWeb\BidWeb\obj\Debug\BidWeb.pdb

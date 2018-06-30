@@ -1,0 +1,15 @@
+﻿Generated model file: BidDB.edmx.
+Loading metadata from the database took 00:00:02.4992641.
+Generating the model took 00:00:02.8029162.
+Generated model file: BidDB.edmx.
+Loading metadata from the database took 00:00:00.7059936.
+Generating the model took 00:00:01.4102512.
+Generated model file: BidDB.edmx.
+Loading metadata from the database took 00:00:00.5965204.
+Generating the model took 00:00:00.4426944.
+Generated model file: BidDB.edmx.
+Loading metadata from the database took 00:00:00.5924443.
+Generating the model took 00:00:00.3888015.
+Generated model file: BidDB.edmx.
+Loading metadata from the database took 00:00:00.5924997.
+Generating the model took 00:00:00.3752232.

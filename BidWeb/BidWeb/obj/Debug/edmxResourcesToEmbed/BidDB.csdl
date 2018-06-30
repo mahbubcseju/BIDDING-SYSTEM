@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BidDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="BidDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
+    <EntitySet Name="BidingInfoes" EntityType="BidDBModel.BidingInfo" />
+    <EntitySet Name="ProductInfoes" EntityType="BidDBModel.ProductInfo" />
+    <EntitySet Name="MyBoughtLists" EntityType="BidDBModel.MyBoughtList" />
+  </EntityContainer>
+  <EntityType Name="BidingInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MaxBid" Type="Double" Nullable="false" />
+    <Property Name="DateHeBid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProductImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MinimumBid" Type="Double" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MyBoughtList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BidMoney" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BidDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BidingInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductCode" Type="varchar(max)" />
+          <Property Name="UserName" Type="varchar(max)" />
+          <Property Name="MaxBid" Type="float" Nullable="false" />
+          <Property Name="DateHeBid" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="MyBoughtList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar(max)" />
+          <Property Name="ProductCode" Type="varchar(max)" />
+          <Property Name="ProductName" Type="varchar(max)" />
+          <Property Name="Picture" Type="varchar(max)" />
+          <Property Name="BidMoney" Type="varchar(max)" />
+          <Property Name="Details" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="ProductInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="varchar(max)" />
+          <Property Name="Category" Type="varchar(max)" />
+          <Property Name="ProductImage" Type="varchar(max)" />
+          <Property Name="MinimumBid" Type="float" Nullable="false" />
+          <Property Name="UserName" Type="varchar(max)" />
+          <Property Name="LastDate" Type="varchar(max)" />
+          <Property Name="Details" Type="varchar(max)" />
+          <Property Name="ProductCode" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar(max)" />
+          <Property Name="Password" Type="varchar(max)" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="Phone" Type="varchar(max)" />
+          <Property Name="Country" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="BidDBModelStoreContainer">
+          <EntitySet Name="BidingInfo" EntityType="Self.BidingInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MyBoughtList" EntityType="Self.MyBoughtList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductInfo" EntityType="Self.ProductInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BidDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="BidDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
+          <EntitySet Name="BidingInfoes" EntityType="BidDBModel.BidingInfo" />
+          <EntitySet Name="ProductInfoes" EntityType="BidDBModel.ProductInfo" />
+          <EntitySet Name="MyBoughtLists" EntityType="BidDBModel.MyBoughtList" />
+        </EntityContainer>
+        <EntityType Name="BidingInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MaxBid" Type="Double" Nullable="false" />
+          <Property Name="DateHeBid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ProductInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MinimumBid" Type="Double" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LastDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MyBoughtList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BidMoney" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BidDBModelStoreContainer" CdmEntityContainer="BidDBEntities">
+          <EntitySetMapping Name="UserInfoes">
+            <EntityTypeMapping TypeName="BidDBModel.UserInfo">
+              <MappingFragment StoreEntitySet="UserInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BidingInfoes">
+            <EntityTypeMapping TypeName="BidDBModel.BidingInfo">
+              <MappingFragment StoreEntitySet="BidingInfo">
+                <ScalarProperty Name="DateHeBid" ColumnName="DateHeBid" />
+                <ScalarProperty Name="MaxBid" ColumnName="MaxBid" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductInfoes">
+            <EntityTypeMapping TypeName="BidDBModel.ProductInfo">
+              <MappingFragment StoreEntitySet="ProductInfo">
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MinimumBid" ColumnName="MinimumBid" />
+                <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyBoughtLists">
+            <EntityTypeMapping TypeName="BidDBModel.MyBoughtList">
+              <MappingFragment StoreEntitySet="MyBoughtList">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="BidMoney" ColumnName="BidMoney" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

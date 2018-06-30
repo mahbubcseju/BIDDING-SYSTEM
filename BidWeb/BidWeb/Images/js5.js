@@ -1,0 +1,1 @@
+$(document).ready(function(){$.ajax({url:"/marketing_page_hits",type:"POST",data:{page:window.location.pathname}})});

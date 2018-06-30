@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BidDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BidingInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductCode" Type="varchar(max)" />
+    <Property Name="UserName" Type="varchar(max)" />
+    <Property Name="MaxBid" Type="float" Nullable="false" />
+    <Property Name="DateHeBid" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="MyBoughtList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar(max)" />
+    <Property Name="ProductCode" Type="varchar(max)" />
+    <Property Name="ProductName" Type="varchar(max)" />
+    <Property Name="Picture" Type="varchar(max)" />
+    <Property Name="BidMoney" Type="varchar(max)" />
+    <Property Name="Details" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar(max)" />
+    <Property Name="Category" Type="varchar(max)" />
+    <Property Name="ProductImage" Type="varchar(max)" />
+    <Property Name="MinimumBid" Type="float" Nullable="false" />
+    <Property Name="UserName" Type="varchar(max)" />
+    <Property Name="LastDate" Type="varchar(max)" />
+    <Property Name="Details" Type="varchar(max)" />
+    <Property Name="ProductCode" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar(max)" />
+    <Property Name="Password" Type="varchar(max)" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="Phone" Type="varchar(max)" />
+    <Property Name="Country" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="BidDBModelStoreContainer">
+    <EntitySet Name="BidingInfo" EntityType="Self.BidingInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyBoughtList" EntityType="Self.MyBoughtList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductInfo" EntityType="Self.ProductInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
